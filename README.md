@@ -2,7 +2,7 @@
 
 A standalone Node.js learning project forked from the official HubSpot Academy starter. It lists fictional investment properties and creates new records through the HubSpot CRM API. This repository does not contain or depend on the private Creative REI application.
 
-**Status:** application implemented; seven automated tests pass. A developer test account, private app, live API verification, and the required list-view URL remain pending. This is not yet ready for assessment submission.
+**Status:** application implemented; seven automated tests pass. Developer test account `247774143` (Christopher Foundations Practicum) is created and verified in HubSpot. The private app form is prepared with the six required scopes; credential creation, live API verification, and the required list-view URL remain pending. This is not yet ready for assessment submission.
 
 **Authorship:** implementation and testing were assisted by OpenAI Codex. The Git history records that assistance. The learner should review, run, and understand this code and confirm that this assistance is acceptable to HubSpot Academy before requesting certification credit. No acceptance or passing grade is implied.
 
@@ -76,7 +76,8 @@ The server binds to localhost. It is a local practicum, not a publicly deployed 
 - [x] Implement three routes and the two required Pug templates.
 - [x] Use Express, Axios, dotenv, and Pug; keep `.env` ignored.
 - [x] Complete local tests and syntax checks.
-- [ ] Verify a separate developer test account and create the required private app.
+- [x] Create and verify separate developer test account `247774143`.
+- [ ] Confirm creation of the prepared private app and its persistent credential.
 - [ ] Verify the custom object, three properties, contact association, and at least three records.
 - [ ] Replace the pending README entry with the real test-account list URL.
 - [ ] Verify a live form submission creates a HubSpot record.

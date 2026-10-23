@@ -7,3 +7,5 @@ Codex is assisting with implementation and verification. Commit authorship and t
 The original sample index.js is preserved as index.starter-reference.js. This file is reference material and is not executed.
 
 Planned implementation: fictional investment-property records, three Express routes, Pug table and form, server-side HubSpot API requests, validation, pagination, safe error reporting, and meaningful integration tests.
+
+Verified progress: developer test account 247774143 was created and is active. Christopher’s Practicum Private App is prepared with crm.schemas.custom.read/write, crm.objects.custom.read/write, and crm.objects.contacts.read/write. No token has been generated. Credential creation requires action-time browser confirmation. Seven automated tests and syntax checks pass; npm audit reports zero vulnerabilities.
