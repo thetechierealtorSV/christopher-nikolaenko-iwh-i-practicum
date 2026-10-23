@@ -1,0 +1,15 @@
+{
+  "verifiedAt": "2026-10-23T10:15:10.469Z",
+  "testAccountId": "247774143",
+  "objectTypeId": "2-270624688",
+  "liveRecordCount": 4,
+  "createdRecordId": "343646044896",
+  "checks": [
+    "GET homepage renders all three seeded HubSpot records",
+    "GET form renders expected fields and CSRF token",
+    "POST form creates a live HubSpot record",
+    "303 redirect returns to refreshed homepage",
+    "Live API confirms name, strategy, and asking price"
+  ],
+  "status": "passed"
+}
