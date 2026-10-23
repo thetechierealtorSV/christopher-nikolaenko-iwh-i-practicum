@@ -1,4 +1,8 @@
 .DS_Store
-node_modules
-package-lock.json
+node_modules/
 .env
+.env.*
+!.env.example
+coverage/
+*.log
+hubspot-setup.local.json

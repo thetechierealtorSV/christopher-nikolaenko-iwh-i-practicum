@@ -1,0 +1,31 @@
+extends layout
+block content
+  a.back(href='/') ← Return to the homepage
+  .page-heading
+    div
+      p.eyebrow NEW OPPORTUNITY
+      h1 Add an investment property
+      p.subtitle Enter the three fields to create a property record.
+  if errors.length
+    .error(role='alert')
+      h2 Please review the form
+      ul
+        each error in errors
+          li= error
+  form.card.property-form(action='/update-cobj' method='post')
+    input(type='hidden' name='csrf' value=csrf)
+    .field
+      label(for='name') Name
+      input#name(type='text' name='name' value=values.name required maxlength='120' autocomplete='off' placeholder='Example: Sunnyvale demo property')
+    .field
+      label(for='strategy') Investment strategy
+      select#strategy(name='strategy' required)
+        option(value='') Choose a strategy
+        each strategy in strategies
+          option(value=strategy selected=values.strategy === strategy)= strategy
+    .field
+      label(for='price') Asking price (USD)
+      input#price(type='number' name='price' value=values.price required min='0' max='9999999999' step='0.01' inputmode='decimal' placeholder='850000')
+    .form-actions
+      button.button(type='submit') Create property
+      a.cancel(href='/') Cancel
