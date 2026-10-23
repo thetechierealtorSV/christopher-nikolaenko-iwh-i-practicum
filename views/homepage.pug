@@ -1,0 +1,35 @@
+extends layout
+block content
+  .page-heading
+    div
+      p.eyebrow PROPERTY WORKSPACE
+      h1 Investment properties
+      p.subtitle Review property records and add a new investment opportunity.
+    a.button(href='/update-cobj') Add to this table
+  if created
+    p.success(role='status') Property created. The table has been refreshed.
+  section.card(aria-label='Property records')
+    .card-header
+      h2 Property records
+      span.count #{records.length} on this page
+    .table-scroll
+      table
+        caption.sr-only Investment property names, strategies, and asking prices
+        thead
+          tr
+            th(scope='col') Name
+            th(scope='col') Investment strategy
+            th.numeric(scope='col') Asking price
+        tbody
+          each record in records
+            tr
+              td.property-name= record.name
+              td
+                span.tag= record.strategy
+              td.numeric= money(record.price)
+          else
+            tr
+              td.empty(colspan='3') No properties yet. Select “Add to this table” to create one.
+  if nextAfter
+    nav.pagination(aria-label='Record pages')
+      a.button.secondary(href='/?after=' + encodeURIComponent(nextAfter)) Next page

@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet' href='/css/style.css')
+  body
+    header.site-header
+      a.brand(href='/')
+        span.brand-mark IP
+        span Investment Properties
+      span.course HubSpot Foundations Practicum
+    main.container
+      if mode === 'demo'
+        aside.notice Demo mode — fictional records stored in memory. HubSpot is not connected; changes reset when this process restarts.
+      block content
+    footer.container.footer Fictional data for integration practice · Standalone learning project
